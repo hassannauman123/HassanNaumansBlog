@@ -10,7 +10,7 @@ body {
 /*Header and header related things*/
 header {
     min-height: 300px;
-    background-image: url(/assets/bg2.jpg);
+    background-image: url(/html/assets/bg2.jpg);
     background-size: cover;
     background-position: center;
     /* To place the divs in center */
@@ -47,7 +47,7 @@ header::after {
     height: 150px;
     background-color: white;
     border-radius: 50%;
-    background-image: url(/assets/hsn.jpg);
+    background-image: url(/html/assets/hsn.jpg);
     background-size: cover;
     /*will always cover full size of the div/pic*/
     /* margin-left:auto;
