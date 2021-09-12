@@ -1,0 +1,234 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.post-link {
+    text-decoration: none;
+}
+
+/*Header and header related things*/
+header {
+    min-height: 300px;
+    background-image: url(/html/assets/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    /* To place the divs in center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /*For header banner tint*/
+}
+
+
+
+/*To make the tint color go behind pfp and name*/
+header>* {
+    /* "Target anything within the header" */
+    z-index: 1;
+    /*1 because everything else is z-index:0 */
+}
+
+header::after {
+    /*For header banner tint. Used to do something again on header after it is made*/
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    background-image: url(/html/assets/hsn.jpg);
+    background-size: cover;
+    /*will always cover full size of the div/pic*/
+    /* margin-left:auto;
+    margin-right:auto;  Should be done in the header     */
+}
+
+.user-name {
+    font-size: 3em;
+    /* text-align: center;  Should be done in the header */
+    color: white;
+    font-weight: bold;
+}
+
+.user-description {
+    font: size 12px;
+    ;
+    /* text-align:center; Should be done in the header */
+    color: white;
+    font-weight: bold;
+}
+
+/*Main and main related things*/
+.main {
+    margin-top: 32px;
+    /*top border*/
+    display: flex;
+    justify-content: center;
+
+}
+
+.main-container {
+    max-width: 750px;
+    min-width: 600px;
+    width: 100%;
+    /*padding-left: 16px;Little space between start and end of text so it doesnt tocuh border*/
+    padding-right: 16px;
+}
+
+
+
+.post {
+    display: flex;
+    border: 0.5px solid rgb(221, 221, 221);
+    border-radius: 8px;
+    min-height: 200px;
+    overflow: hidden;
+    margin: 10px;
+    cursor: pointer;
+    /*changes the pointer to hand*/
+}
+
+
+.post:hover {
+    transform: translate3d(0, -5px, 0);
+    /*(x,y,z)*/
+    transition: all 0.25s ease-out;
+    /* transition: all 0.25s linear*/
+    box-shadow: 0 2px 5px 0 rgb(110, 109, 109);
+}
+
+.post-image {
+    flex-basis: 40%;
+    background-size: cover;
+    background-image: url(/assets/work-pic2.jpg);
+    background-position: center;
+    border-radius: 8px;
+}
+
+.post-content {
+    padding: 24px;
+    flex-basis: 60%;
+
+}
+
+.post-date {
+    /* margin-top: top; */
+    font-size: 12px;
+    color: rgb(196, 196, 196);
+    font-weight: 600;
+}
+
+.post-title {
+    margin-top: 12px;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 600;
+}
+
+.post-title h4 {
+    /*H4 tags used in html, for header*/
+    margin: 0;
+}
+
+.post-text {
+    margin-top: 4px;
+    font-size: 14px;
+    color: rgb(24, 21, 21);
+    font-weight: 400;
+    line-height: 1.4;
+    /*space the lines*/
+    max-height: 78px;
+    /*Max words/senetences allowed on home page*/
+    overflow: hidden;
+    /*Hide the overflown items */
+}
+
+
+footer {
+    min-height: 100px;
+    background-color: #eaecee70;
+    color: #929eaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.nav-button.new-post-button:hover {
+    background-color: #002349;
+
+}
+
+.nav-button.new-post-button {
+    cursor: pointer;
+    /*changes the pointer to hand*/
+    position: fixed;
+    /*fixed scrolls with you, position:absolute doesnt*/
+    bottom: 100px;
+    right: 70px;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    background-color: #004186;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+    transition: all 0.25s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post2-image {
+    flex-basis: 40%;
+    background-size: cover;
+    background-image: url(/assets/post2-image.jpg);
+    background-position: center;
+    border-radius: 8px;
+}
+
+.post3-image {
+    flex-basis: 40%;
+    background-size: cover;
+    background-image: url(/assets/post3-image.jpg);
+    background-position: center;
+    border-radius: 8px;
+}
+
+
+.navigation a {
+    /*Every link always has an underline, so text set text-dec and .navigation to .navigation a*/
+    text-decoration: none;
+    cursor: pointer;
+    /*changes the pointer to hand*/
+    bottom: 5px;
+    font-size: 12px;
+    padding: 5px;
+    color: rgb(48, 19, 175);
+    border-radius: 4px;
+    border: 0.5px solid rgb(48, 19, 175);
+}
+
+/* .post-container{
+    max-width: 750px;
+    min-width: 600px;
+    width: 100%;
+    padding-right: 16px;
+    margin-top: 30px;
+} */
+
+a.post-link {
+    text-decoration: none;
+}
